@@ -65,6 +65,12 @@ func (c color) describe(description string) string {
 	return string(c) + " " + description
 }
 
+func getByteType(text string) []byte {
+	byteData := []byte(text) //	Type conversion
+	fmt.Println(byteData)
+	return byteData
+}
+
 func main() {
 	var x, y int = 1, 5
 	fmt.Println("Hello, Go in CodeSandbox!")
@@ -78,4 +84,5 @@ func main() {
 
 	variab()
 	loops_go()
+	getByteType("Test")
 }
