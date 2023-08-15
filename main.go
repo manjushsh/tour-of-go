@@ -30,6 +30,41 @@ func variab() {
 	fmt.Println(a, b, c, d)
 }
 
+func loops_go() {
+
+	// Single condition
+	i := 1
+	for i < 3 {
+		fmt.Printf("Loop single value %d \n", i)
+		i = i + 1
+	}
+
+	// Normal for Loop
+	for j := 1; j < 3; j++ {
+		fmt.Println("Normal loop like C : ", j)
+	}
+
+	// One time
+	for {
+		fmt.Println("loop")
+		// Remove break for infinite loop
+		break
+	}
+
+	for n := 0; n <= 5; n++ {
+		if n%2 == 0 {
+			continue
+		}
+		fmt.Println(n)
+	}
+}
+
+type color string
+
+func (c color) describe(description string) string {
+	return string(c) + " " + description
+}
+
 func main() {
 	var x, y int = 1, 5
 	fmt.Println("Hello, Go in CodeSandbox!")
@@ -37,5 +72,10 @@ func main() {
 	fmt.Printf("Addition of %d and %d is: %d \n", x, y, add(x, y))
 	fmt.Println(swap("john", "doe"))
 	fmt.Println(split(22))
+
+	c := color("Red")
+	fmt.Println(c.describe("is an awesome color"))
+
 	variab()
+	loops_go()
 }
