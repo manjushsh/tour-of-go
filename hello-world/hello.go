@@ -71,6 +71,16 @@ func getByteType(text string) []byte {
 	return byteData
 }
 
+func type_conversions() {
+	i := 64
+	b := false
+	s := fmt.Sprint(i)
+	si := string(i)
+	f := float32(i)
+	u := uint(f)
+	fmt.Println("Values: ", i, b, s, si, f, u)
+}
+
 func main() {
 	var x, y int = 1, 5
 	fmt.Println("Hello, Go in CodeSandbox!")
@@ -85,4 +95,6 @@ func main() {
 	variab()
 	loops_go()
 	getByteType("Test")
+
+	type_conversions()
 }
