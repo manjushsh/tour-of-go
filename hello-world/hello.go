@@ -51,6 +51,15 @@ func loops_go() {
 		break
 	}
 
+	// No intialize
+	j := 0
+	for j < 100 {
+		if j%2 == 0 {
+			fmt.Println("Even: ", j)
+		}
+		j++
+	}
+
 	for n := 0; n <= 5; n++ {
 		if n%2 == 0 {
 			continue
